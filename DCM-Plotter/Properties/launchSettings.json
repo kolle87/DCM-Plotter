@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "DCM-Plotter (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "DCM-Plotter (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

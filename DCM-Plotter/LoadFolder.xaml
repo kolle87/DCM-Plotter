@@ -1,0 +1,49 @@
+﻿<Page
+    x:Class="DCM_Plotter.LoadFolder"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DCM_Plotter"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Padding="16, 16, 0, 0">
+        <StackPanel Orientation="Vertical">
+            <TextBlock Text="Load Folder" Margin="12, 6, 12, 6" Style="{StaticResource TitleTextBlockStyle}" />
+            <TextBlock Text="Please select and load a folder" Margin="12, 6, 12, 6" Style="{StaticResource BodyTextBlockStyle}" />
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="FolderTextBox" MinWidth="360" Margin="6, 6, 6, 6" IsEnabled="False" Text="No Folder Selected"></TextBox>
+                <Button Click="Btn_SelectFolder" Margin="6, 6, 6, 6">...</Button>
+            </StackPanel>
+            <Button x:Name="ScanFolderButton" Click="Btn_ScanFolder"  Margin="6, 6, 6, 6" IsEnabled="False">Load Folder</Button>
+
+            <StackPanel x:Name="SystemPanel" Visibility="Collapsed" Orientation="Vertical" Margin="6, 32, 6, 6" Padding="0, 0, 12, 12" HorizontalAlignment="Left" Background="{StaticResource SolidBackgroundFillColorQuarternary}">
+                <TextBlock Text="Choose your system" Margin="12, 6, 6, 12" Style="{StaticResource SubtitleTextBlockStyle}" />
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="SelectSystem_WiCE1" Click="Btn_SelectWiCE1" IsEnabled="False" Width="120" Margin="12, 6, 6, 6">WiCE ME#1</Button>
+                    <Button x:Name="SelectSystem_WiCE2" Click="Btn_SelectWiCE2" IsEnabled="False" Width="120" Margin="12, 6, 6, 6">WiCE ME#2</Button>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="SelectSystem_UNIC1" Click="Btn_SelectUNIC1" IsEnabled="False" Width="120" Margin="12, 6, 6, 6">UNIC ME#1</Button>
+                    <Button x:Name="SelectSystem_UNIC2" Click="Btn_SelectUNIC2" IsEnabled="False" Width="120" Margin="12, 6, 6, 6">UNIC ME#2</Button>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="SelectSystem_WECS1" Click="Btn_SelectWECS1" IsEnabled="False" Width="120" Margin="12, 6, 6, 6">WiCE ME#1</Button>
+                    <Button x:Name="SelectSystem_WECS2" Click="Btn_SelectWECS2" IsEnabled="False" Width="120" Margin="12, 6, 6, 6">WiCE ME#2</Button>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="SelectSystem_SCR1" Click="Btn_SelectSCR1" IsEnabled="False" Width="120" Margin="12, 6, 6, 6">SCR ME#1</Button>
+                    <Button x:Name="SelectSystem_SCR2" Click="Btn_SelectSCR2" IsEnabled="False" Width="120" Margin="12, 6, 6, 6">SCR ME#2</Button>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="SelectSystem_Generic1" Click="Btn_SelectGeneric1" IsEnabled="False" Width="120" Margin="12, 6, 6, 6">Generic ME#1</Button>
+                    <Button x:Name="SelectSystem_Generic2" Click="Btn_SelectGeneric2" IsEnabled="False" Width="120" Margin="12, 6, 6, 6">Generic ME#2</Button>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="SelectSystem_AMS" Click="Btn_SelectAMS" IsEnabled="False" Width="120" Margin="12, 6, 6, 6">AMS Signals</Button>
+                </StackPanel>
+            </StackPanel>    
+        </StackPanel>
+    </Grid>
+</Page>

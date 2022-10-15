@@ -1,0 +1,59 @@
+﻿<Page
+    x:Class="DCM_Plotter.SelectSignalsWiCE"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DCM_Plotter"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.Resources>
+        <DataTemplate x:Key="wice_common_indications_diesel" x:DataType="x:String"> <TextBlock  Text="{Binding}" Style="{ThemeResource BodyTextBlockStyle}" /> </DataTemplate>
+        <DataTemplate x:Key="crosscheck" x:DataType="x:String"> <TextBlock  Text="{Binding}" Style="{ThemeResource BodyTextBlockStyle}" /> </DataTemplate>
+    </Page.Resources>
+    
+    <Grid Padding="16, 16, 16, 16">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions> 
+        <TextBlock Grid.Row="0" x:Name="pageTitle" Text="Select Signals" Margin="12, 6, 12, 24" Style="{StaticResource TitleTextBlockStyle}"/>
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <!-- Item List: wice_common_indications_diesel -->
+            <Grid Margin="6, 6, 6, 6" Padding="12, 12, 12, 12" Background="{StaticResource SolidBackgroundFillColorQuarternary}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Text="wice_common_indications_diesel" Margin="0, 0, 0, 12" Style="{StaticResource SubtitleTextBlockStyle}" />
+                <Grid Grid.Row="1" Background="{StaticResource SubtleFillColorSecondary}">
+                    <ListView x:Name="list_wice_common_indications_diesel" SelectionMode="Multiple" SelectionChanged="Item_Changed" IsItemClickEnabled="False" ItemTemplate="{StaticResource wice_common_indications_diesel}"/>
+                </Grid>
+            </Grid>
+            <!-- Item List: wice_cylinder_indications_diesel -->
+            <Grid Margin="6, 6, 6, 6" Padding="12, 12, 12, 12" Background="CadetBlue">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Text="wice_common_indications_diesel" Margin="0, 0, 0, 12" Style="{StaticResource SubtitleTextBlockStyle}" />
+                <Grid Grid.Row="1" Background="Maroon">
+                    <ListView x:Name="list_crosscheck" ItemTemplate="{StaticResource crosscheck}"/>
+                </Grid>
+            </Grid>
+        </StackPanel>    
+        
+    </Grid>
+    
+</Page>
+
